@@ -1,0 +1,28 @@
+#!/bin/bash
+
+BUS=7
+STATE=/tmp/ddc_bus7
+STEP=5
+
+# initialize state if missing
+[ ! -f "$STATE" ] && echo 50 > "$STATE"
+
+CURRENT=$(cat "$STATE")
+
+case "$1" in
+  up)   NEW=$((CURRENT + STEP)) ;;
+  down) NEW=$((CURRENT - STEP)) ;;
+  *) echo "use: up | down"; exit 1 ;;
+esac
+
+((NEW<0)) && NEW=0
+((NEW>100)) && NEW=100
+
+echo "$NEW" > "$STATE"
+
+ddcutil --bus $BUS \
+        --noverify \
+        --maxtries 1,1,1 \
+        --sleep-multiplier 0.1 \
+        setvcp 10 "$NEW" \
+        > /dev/null 2>&1 &
