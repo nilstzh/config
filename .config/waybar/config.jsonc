@@ -1,0 +1,24 @@
+{
+  "layer": "top",
+  "modules-left": ["niri/workspaces"],
+  "modules-center": ["niri/window"],
+  "modules-right": ["custom/brightness", "custom/volume", "clock"],
+  "niri/window": {
+    "max-length": 50,
+  },
+  "custom/brightness": {
+    "exec": "~/.config/waybar/scripts/brightness.sh",
+    "interval": 1,
+    "format": " {}% ",
+    "tooltip": false,
+  },
+  "custom/volume": {
+    "exec": "wpctl get-volume 50 | awk '{print int($2 * 100)}'",
+    "interval": 1,
+    "format": " {}% ",
+    "tooltip": false,
+  },
+  "clock": {
+    "format-alt": "{:%a, %d. %b  %H:%M}",
+  },
+}

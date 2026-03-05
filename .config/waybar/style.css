@@ -1,0 +1,16 @@
+* {
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+    font-family: monospace;
+}
+
+window#waybar {
+    background: #444;
+}
+
+#custom-volume,
+#custom-brightness,
+#clock {
+    padding: 0 10px 0 0;
+}
