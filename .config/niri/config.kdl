@@ -384,6 +384,10 @@ binds {
     XF86AudioPrev        allow-when-locked=true { spawn-sh "playerctl previous"; }
     XF86AudioNext        allow-when-locked=true { spawn-sh "playerctl next"; }
 
+    // Audio output control.
+    Mod+Shift+H hotkey-overlay-title="Audio: Headphones" { spawn "bash" "-c" "/home/nilstzh/bin/headphone-switch.sh plugged"; }
+    Mod+Shift+S hotkey-overlay-title="Audio: Speakers (HDMI)" { spawn "bash" "-c" "/home/nilstzh/bin/headphone-switch.sh unplugged"; }
+
     // Toggle Overview: a zoomed-out view of workspaces and windows.
     Mod+O repeat=false { toggle-overview; }
 
