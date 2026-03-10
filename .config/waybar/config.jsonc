@@ -13,9 +13,9 @@
     "tooltip": false,
   },
   "custom/volume": {
-    "exec": "wpctl get-volume 50 | awk '{print int($2 * 100)}'",
+    "exec": "~/.config/waybar/scripts/volume.sh",
     "interval": 1,
-    "format": " {}% ",
+    "format": "{}",
     "tooltip": false,
   },
   "clock": {
