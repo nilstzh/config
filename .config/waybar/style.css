@@ -57,7 +57,8 @@ window#waybar {
 
 #custom-brightness,
 #custom-volume,
-#clock {
+#clock,
+#custom-power {
     padding: 0 14px;
     color: #e2dccb;
     border-top: 2px solid transparent;
@@ -84,4 +85,10 @@ window#waybar {
     border-top-color: #a7a1da; /* palette-4 lavender */
     font-weight: 500;
     padding-right: 16px;
+}
+
+#custom-power {
+    color: #cc92b9;
+    border-top-color: #cc92b9;
+    padding: 0 10px;
 }

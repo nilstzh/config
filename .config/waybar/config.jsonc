@@ -2,7 +2,12 @@
   "layer": "top",
   "modules-left": ["niri/workspaces"],
   "modules-center": ["niri/window"],
-  "modules-right": ["custom/brightness", "custom/volume", "clock"],
+  "modules-right": [
+    "custom/brightness",
+    "custom/volume",
+    "clock",
+    "custom/power",
+  ],
   "niri/window": {
     "max-length": 50,
   },
@@ -20,5 +25,10 @@
   },
   "clock": {
     "format": "{:%a %b %d  %H:%M}",
+  },
+  "custom/power": {
+    "format": "",
+    "tooltip": false,
+    "on-click": "systemctl poweroff",
   },
 }
