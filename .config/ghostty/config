@@ -1,0 +1,4 @@
+font-family = "Fira Code"
+font-size = 12
+theme = moonbeam
+adjust-cell-height = +15%
