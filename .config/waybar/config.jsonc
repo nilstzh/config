@@ -19,6 +19,6 @@
     "tooltip": false,
   },
   "clock": {
-    "format-alt": "{:%a, %d. %b  %H:%M}",
+    "format": "{:%a %b %d  %H:%M}",
   },
 }

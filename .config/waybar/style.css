@@ -1,16 +1,87 @@
 * {
     border: none;
     border-radius: 0;
-    min-height: 0;
-    font-family: monospace;
+    min-height: 27px;
+    font-family: "Noto Sans";
+    font-size: 16px;
 }
 
 window#waybar {
-    background: #444;
+    background: #212b3b;
+    color: #e2dccb;
 }
 
-#custom-volume,
+/* ── Workspaces ─────────────────────────────────────────── */
+
+#workspaces {
+    margin: 0;
+    padding: 0;
+}
+
+#workspaces button {
+    padding: 0 10px;
+    color: #999b9b;
+    background: transparent;
+    border-top: 2px solid transparent;
+    font-weight: 500;
+    transition:
+        color 0.15s,
+        border-color 0.15s;
+}
+
+#workspaces button:hover {
+    color: #a7a1da;
+    background: #273345;
+    box-shadow: none;
+}
+
+#workspaces button.active {
+    color: #a7a1da;
+    border-top: 2px solid #a7a1da; /* palette-4 lavender */
+}
+
+#workspaces button.urgent {
+    color: #cc92b9; /* palette-1 pink */
+    border-top: 2px solid #cc92b9;
+}
+
+/* ── Window title ───────────────────────────────────────── */
+
+#window {
+    color: #999b9b;
+    font-style: italic;
+    padding: 0 12px;
+}
+
+/* ── Right modules: shared base ────────────────────────── */
+
 #custom-brightness,
+#custom-volume,
 #clock {
-    padding: 0 10px 0 0;
+    padding: 0 14px;
+    color: #e2dccb;
+    border-top: 2px solid transparent;
+}
+
+/* ── Brightness — warm yellow ───────────────────────────── */
+
+#custom-brightness {
+    color: #cdbf88; /* palette-3 yellow */
+    border-top-color: #cdbf88;
+}
+
+/* ── Volume — muted green ───────────────────────────────── */
+
+#custom-volume {
+    color: #9ed0ac; /* palette-2 green */
+    border-top-color: #9ed0ac;
+}
+
+/* ── Clock — lavender, slightly more prominent ──────────── */
+
+#clock {
+    color: #a7a1da;
+    border-top-color: #a7a1da; /* palette-4 lavender */
+    font-weight: 500;
+    padding-right: 16px;
 }
