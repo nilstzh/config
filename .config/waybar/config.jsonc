@@ -5,6 +5,7 @@
   "modules-right": [
     "custom/brightness",
     "custom/volume",
+    "custom/keyboard",
     "clock",
     "custom/power",
   ],
@@ -30,5 +31,10 @@
     "format": "",
     "tooltip": false,
     "on-click": "systemctl poweroff",
+  },
+  "custom/keyboard": {
+    "exec": "niri msg keyboard-layouts | grep '^\\s*\\*' | grep -oP '\\d+ \\K.*' | cut -c1-3",
+    "interval": 1,
+    "format": " {}",
   },
 }

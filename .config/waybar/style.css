@@ -55,6 +55,7 @@ window#waybar {
 
 /* ── Right modules: shared base ────────────────────────── */
 
+#custom-keyboard,
 #custom-brightness,
 #custom-volume,
 #clock,
@@ -76,6 +77,11 @@ window#waybar {
 #custom-volume {
     color: #9ed0ac; /* palette-2 green */
     border-top-color: #9ed0ac;
+}
+
+#custom-keyboard {
+    color: #99bac1; /* palette-3 yellow */
+    border-top-color: #99bac1;
 }
 
 /* ── Clock — lavender, slightly more prominent ──────────── */
