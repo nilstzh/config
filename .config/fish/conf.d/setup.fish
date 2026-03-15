@@ -1,4 +1,4 @@
-set -U fish_color_command 91BA9C
+set -U fish_color_command A7A1DA
 
 set -U tide_left_prompt_items time pwd git newline character
 set -U tide_right_prompt_items
